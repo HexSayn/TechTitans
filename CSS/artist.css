@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+}
+#controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+button {
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: var(--card-shadow);
+}
+button:hover {
+    background-color: var(--secondary-color);
+}
+canvas {
+    border: 2px solid var(--accent-color);
+    background-color: white;
+    box-shadow: var(--card-shadow);
+}

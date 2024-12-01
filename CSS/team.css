@@ -1,0 +1,99 @@
+.team-container {
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 20px;
+}
+
+.team-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #3865ad;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 30px;
+}
+
+.team-card {   /* card background, you can change the colors if you want im not good with that */
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: scale(1.03); /* card hover animation, you can tweak the numbers if you want but i think its already perfect */
+}
+
+.card-image-container {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.card-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.primary-image {
+    opacity: 1;
+    z-index: 1;
+}
+
+.hover-image {
+    opacity: 0;
+    z-index: 2;
+}
+
+.team-card:hover .primary-image {
+    opacity: 0;
+}
+
+.team-card:hover .hover-image {  /* team, this part is for image animation, once again dont remove anything but you are free to tweak the number if you want (actually just dont touch it) */
+    opacity: 1;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.card-content h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Once again for mobile, do not touch this please */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image-container {
+        height: 300px;
+    }
+}
+.about-logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+
+}

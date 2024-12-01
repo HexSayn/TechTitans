@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)202X by Ibrahim Shadmanli, Aliyev Huseyn
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<html>
+    <head>
+        <title>Homework 3: Programming art</title>
+        <link rel="stylesheet" href="/CSS/artist.css">  
+        <link rel="stylesheet" href="/CSS/main.css">  
+        <link rel="stylesheet" href="/CSS/nav.css">  
+        
+    </head>
+    <body>
+        <nav class="main-nav">
+            <img class="about-logo" src="/media/Tech Titans.png">
+
+            <ul>
+                <li><a href="/index.html" >Home</a></li>
+                <li><a href="/Pages/team-members.html"  >Team</a></li>
+                <li><a href="/Pages/web-project.html">Projects</a></li>
+
+                <li><a href="/Pages/code-artist.html" class="active">Code Art</a></li>
+            </ul>
+            <div class="nav-icon">
+                <img src="/media/ada_logo_color.png" alt="ADA Logo">
+            </div>
+        </nav>
+
+        <div class="Fixer" ></div>
+
+        <div id="controls">
+            <button onclick="moveForward(50)">Move Forward</button>
+            <button onclick="turnLeft(90)">Turn Left</button>
+            <button onclick="turnRight(90)">Turn Right</button>
+            <button onclick="resetCanvas()">Reset Canvas</button>
+            <button onclick="drawRandomColor()">Random Color </button>
+            <button onclick="drawKochSnowflake(Math.floor(Math.random() * 5) + 1)">Draw Koch Snowflake</button> <!--random here because its cool-->
+        </div>
+            
+        <canvas id="art-canvas" width="640" height="480">
+            Sorry ... your browser doesn't support the HTML5 canvas element.
+        </canvas>      
+
+        <script src="/scripts.js"></script>
+    </body>
+</html>

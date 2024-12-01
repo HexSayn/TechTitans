@@ -1,0 +1,82 @@
+/* this is perfect as it is dont do anything*/
+
+.main-nav {
+    background: var(--primary-color);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+
+.nav-icon {
+    height: 40px;
+    border-radius: 10;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.nav-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.main-nav a:hover,  /* color animations dont touch please */
+.main-nav a.active {
+    color: var(--secondary-color);
+}
+
+/* TEAM MEMBERS DO NOT TOUCH THIS THIS IS FOR MOBILE*/
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .main-nav li {
+        margin: 10px 0;
+    }
+    .nav-icon {
+        margin: 10px 0;
+    }
+}
+
+.about-logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+
+}

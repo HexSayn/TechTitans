@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #479bc5;   /* team please fix up colors because im not great at design, also this is the correct way of coloring, please use these instead of writing it manually */
+    --secondary-color: #3865ad;
+    --accent-color: #5ba4d4;
+    --background-color: #f4f4f4;
+    --text-color: #323232;
+    --card-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    padding: 20px;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
+    color: rgb(0, 0, 0); /* i will change this to white once the photoshopped image is ready DO NOT worry  */
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* i already miss tailwind css :( */
+    z-index: -1;
+    transform: skewY(-5deg);
+    transform-origin: 0; /* i will add cool background images to some of these once i finish photoshopping them, let them stay like this for now */
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* dont change animations unless you know what you are doing */
+}
+
+.card-image1 {
+    height: 200px;
+    /* background: red; */
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--primary-color);
+}
+
+/* TEAM MEMBERS DO NOT TOUCH THIS THIS IS FOR MOBILE */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .hero {
+        padding: 60px 20px;
+    }
+}
+
+.image1{
+    height: 200px;
+    width: 337px;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    border-radius: 4px;
+    margin-bottom: 15px;
+
+}
+.image2{
+    height: 200px;
+    width: 337px;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    border-radius: 4px;
+    margin-bottom: 15px;
+
+}
+
+.yembed {
+    position: relative;
+    width: 100%;
+    padding-top: 56%;
+}
+
+.yembed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.Fixer{
+    height: 300px;
+}
